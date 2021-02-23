@@ -1,0 +1,22 @@
+Lasagna|7|False|135
+Butter Chicken|2|False|490
+Moo Goo Guy Pan|1|False|272
+Vegetable Alicha|3|True|138
+Spanakopita|5|True|260
+Chirashi Don|6|False|600
+Canuck Burger|0|False|7500
+Turducken|8|False|12240
+Shark Fin Soup|1|False|46
+
+
+
+ newfoods = deepcopy(foods)
+    newfoods = newfoods.sort()
+    
+    print("Food {:>36s} {:>16s} {}".format("Origin","Vegetarian","Calories"))
+    print("{:-<34s} {:-<12s} {:-<10} {:-<8}".format("","","",""))
+    for food in newfoods:
+        print('{:<34} {:<17} {:<5s} {:>8}'.format(food.name, 
+food.ORIGIN[food.origin], str(food.is_vegetarian),food.calories))
+    
+    return
